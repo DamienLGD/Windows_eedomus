@@ -1,0 +1,67 @@
+{
+	"plugin_id":"windows",
+	"name_fr": "PC Windows",
+	"icon":"pc.png",
+	"version":"1.01",
+	"creation_date":"2018-01-13",
+	"modification_date":"2018-01-14",
+	"author":"<a href='https://github.com/DamienLGD/Windows_eedomus' target='_blank'>Xianghua<img src='/img/external.png'></a>",
+	"description_fr":"Plugin pour Windows (Wake on lan si connecté en Ethernet, extinction, veille, redémarrage)<br>Vous devez par contre installer ce <a href='http://www.airytec.com/en/switch-off/get.aspx' target='_blank'>logiciel</a> et le configurer (Activer l'interface web et authoriser le porte 8000 - voir aide sur le forum si besoin)",
+	"description_en":"Plugin for Windows computer.<br>You can boot with Wake on lan, power off, restart or sleep your computer but you have to install and configure this <a href='href='http://www.airytec.com/en/switch-off/get.aspx' target='_blank'>Software</a> before (Activate web interface and authorize 8000 port on your firewall",
+	"description_es": "",
+	"description_it": "",
+	"description_de": "",
+	"forum_link": "http://forum.eedomus.com/viewtopic.php?f=15&t=5747",
+"parameters":
+[
+	{
+		"parameter": "IP", 
+		"description": "Adresse IP",
+		"xtype": "textfield",
+		"default_value": "",
+		"field": "width:130, allowBlank:false, maskRe:/[0-9.]/, regex:/^(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])$/,  regexText:'Adresse IP invalide [0-255].[0-255].[0-255].[0-255]'"
+	},
+    {
+        "parameter": "PORT",
+        "description": "Port",
+        "xtype": "numberfield",
+		"default_value": "",
+		"field": "minValue:0, allowDecimals:false, width:60, allowBlank:false"
+    },
+    {
+        "parameter": "MAC",
+        "description": "Adresse Mac",
+		"xtype": "textfield",
+		"default_value": "",
+        "field": "allowBlank: false , maskRe:/[0-9A-Da-d:]/, maxLength:17, minLength:17, width: 250, regex:/^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$/, regexText:'Adresse MAC invalide, format AA:AA:AA:AA:AA:AA'"
+    }
+],
+"devices":
+	[{
+	"device_id":"windows_pc",
+	"module_id":"41",
+	"type":"http",
+	"name_fr":"PC Windows",
+	"name_en":"PC Windows",
+	"icon":"pc.png",
+	"utilisation_id":"43", 
+	"parameters":{
+		"VAR1": "plugin.parameters.IP",
+		"VAR2": "plugin.parameters.PORT",
+		"VAR3": "plugin.parameters.MAC",
+		"value_type":"list",
+		"ignore_errors":3,
+		"RAW_URL":"http://localhost/tools/?action=ping&url=[VAR1]",
+		"RAW_XPATH":"/eedomus/result * 100",
+		"POLLING":"1",
+		"convert": 0
+	},
+	"values":
+	[
+		{ "value": "100", "description": "On", "icon": "pc_on.png", "http_url": "http://localhost/tools", "http_type": "GET",  "http_params": "/?action=wol&mac=[VAR3]" },
+		{ "value": "0", "description": "Off", "icon": "pc_off.png", "http_url": "http://[VAR1]:[VAR2]", "http_type": "GET",  "http_params": "/?action=System.Shutdown" },
+		{ "value": "Sleep", "description": "Sleep", "icon": "pc_sleep.png", "http_url": "http://[VAR1]:[VAR2]", "http_type": "GET",  "http_params": "/?action=System.Sleep" },
+		{ "value": "Restart", "description": "Restart", "icon": "pc_restart.png", "http_url": "http://[VAR1]:[VAR2]", "http_type": "GET",  "http_params": "/?action=System.Restart" }
+	]
+	}]
+}
