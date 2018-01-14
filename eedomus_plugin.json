@@ -2,16 +2,16 @@
 	"plugin_id":"windows",
 	"name_fr": "PC Windows",
 	"icon":"pc.png",
-	"version":"1.01",
+	"version":"1.03",
 	"creation_date":"2018-01-13",
 	"modification_date":"2018-01-14",
 	"author":"<a href='https://github.com/DamienLGD/Windows_eedomus' target='_blank'>Xianghua<img src='/img/external.png'></a>",
-	"description_fr":"Plugin pour Windows (Wake on lan si connecté en Ethernet, extinction, veille, redémarrage)<br>Vous devez par contre installer ce <a href='http://www.airytec.com/en/switch-off/get.aspx' target='_blank'>logiciel</a> et le configurer (Activer l'interface web et authoriser le porte 8000 - voir aide sur le forum si besoin)",
+	"description_fr":"Plugin pour controler son Windows (Wake on lan si connecté en Ethernet, extinction, veille, redémarrage)<br>Vous devez par contre installer <a href='http://www.airytec.com/en/switch-off/get.aspx' target='_blank'>Airytec</a> et le configurer (Activer l'interface web et autoriser le port 8000 - voir aide sur la doc si besoin)",
 	"description_en":"Plugin for Windows computer.<br>You can boot with Wake on lan, power off, restart or sleep your computer but you have to install and configure this <a href='href='http://www.airytec.com/en/switch-off/get.aspx' target='_blank'>Software</a> before (Activate web interface and authorize 8000 port on your firewall",
 	"description_es": "",
 	"description_it": "",
 	"description_de": "",
-	"forum_link": "http://forum.eedomus.com/viewtopic.php?f=15&t=5747",
+	"forum_link": "http://forum.eedomus.com/viewtopic.php?f=50&t=6453",
 "parameters":
 [
 	{
@@ -50,7 +50,7 @@
 		"VAR2": "plugin.parameters.PORT",
 		"VAR3": "plugin.parameters.MAC",
 		"value_type":"list",
-		"ignore_errors":3,
+		"ignore_errors":0,
 		"RAW_URL":"http://localhost/tools/?action=ping&url=[VAR1]",
 		"RAW_XPATH":"/eedomus/result * 100",
 		"POLLING":"1",
