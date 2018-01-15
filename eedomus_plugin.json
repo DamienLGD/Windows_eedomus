@@ -2,7 +2,7 @@
 	"plugin_id":"windows",
 	"name_fr": "PC Windows",
 	"icon":"pc.png",
-	"version":"1.03",
+	"version":"1.05",
 	"creation_date":"2018-01-13",
 	"modification_date":"2018-01-14",
 	"author":"<a href='https://github.com/DamienLGD/Windows_eedomus' target='_blank'>Xianghua<img src='/img/external.png'></a>",
@@ -11,7 +11,6 @@
 	"description_es": "",
 	"description_it": "",
 	"description_de": "",
-	"forum_link": "http://forum.eedomus.com/viewtopic.php?f=50&t=6453",
 "parameters":
 [
 	{

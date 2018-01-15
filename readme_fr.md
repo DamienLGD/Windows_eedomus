@@ -1,6 +1,6 @@
 # Windows_eedomus
 
-Plugin pour gÃ©rer son PC Windows depuis sa Eedomus (Wake on lan si connectÃ© en Ethernet, extinction, veille, redÃ©marrage)
+Plugin pour gérer son PC Windows depuis sa Eedomus (Wake on lan si connecté en Ethernet, extinction, veille, redémarrage)
 Vous devez par contre installer [Airytec](http://www.airytec.com/en/switch-off/get.aspx) et le configurer (Activer l'interface web et autoriser le port 8000 par ex)
 
 ## Configuration de Airytec
@@ -9,7 +9,7 @@ Aller dans votre systray
 
 ![systray](https://image.noelshack.com/fichiers/2018/02/7/1515934344-capture-d-ecran-2018-01-13-a-16-18-27.png)
 
-Puis clic droit sur l'icÃ´ne et options
+Faites un clic droit sur l'icône puis options
 
 ![systray_clic](https://image.noelshack.com/fichiers/2018/02/7/1515934344-capture-d-ecran-2018-01-13-a-16-21-21.png)
 
@@ -19,18 +19,18 @@ Activer l'interface web
 
 ## Configuration du Firewall de Windows
 
-Par dÃ©faut, le firewall de Windows va bloquer les connexions sur le port, il faut crÃ©er une rÃ¨gle pour laisser le port ouvert.
+Par défaut, le firewall de Windows va bloquer les connexions vers le port, il faut créer une règle pour laisser le port ouvert.
 Voici la config sur Windows 7
 
-Aller dans les paramÃªtres avancÃ©s
+Aller dans les paramètres avancés
 
 ![firewall](https://image.noelshack.com/fichiers/2018/02/7/1515934347-capture-d-ecran-2018-01-14-a-13-37.png)
 
-CrÃ©er une nouvelle rÃ¨gle entrante
+Créer une nouvelle règle entrante
 
 ![firewallrule](https://image.noelshack.com/fichiers/2018/02/7/1515934346-capture-d-ecran-2018-01-14-a-13-45-39.png)
 
-Celle ci sera basÃ© sur le port
+Celle-ci sera basée sur le port
 
 ![portforwarding](https://image.noelshack.com/fichiers/2018/02/7/1515934346-capture-d-ecran-2018-01-13-a-16-33-44.png)
 
