@@ -6,7 +6,7 @@
 	"creation_date":"2018-01-13",
 	"modification_date":"2018-01-14",
 	"author":"<a href='https://github.com/DamienLGD/Windows_eedomus' target='_blank'>Xianghua<img src='/img/external.png'></a>",
-	"description_fr":"Plugin pour controler son Windows (Wake on lan si connecté en Ethernet, extinction, veille, redémarrage)<br>Vous devez par contre installer <a href='http://www.airytec.com/en/switch-off/get.aspx' target='_blank'>Airytec</a> et le configurer (Activer l'interface web et autoriser le port 8000 - voir aide sur la doc si besoin)",
+	"description_fr":"Plugin pour controler son Windows (Wake on lan si connecté en Ethernet, extinction, veille, redémarrage)<br>Vous devez par contre installer <a href='http://www.airytec.com/en/switch-off/get.aspx' target='_blank'>Airytec</a> et le configurer (Activer l'interface web et autoriser le port 8000)<br>Voir aide sur la doc si besoin",
 	"description_en":"Plugin for Windows computer.<br>You can boot with Wake on lan, power off, restart or sleep your computer but you have to install and configure this <a href='href='http://www.airytec.com/en/switch-off/get.aspx' target='_blank'>Software</a> before (Activate web interface and authorize 8000 port on your firewall",
 	"description_es": "",
 	"description_it": "",
