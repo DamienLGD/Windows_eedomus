@@ -1,6 +1,6 @@
 # Windows_eedomus
 
-Plugin to control your Windows computer with your Eedomus (Wake on lan, shutdown, sleep, restart)
+Plugin to control your Windows computer with your Eedomus (Wake on lan, shutdown, sleep, restart)  
 You have to install [Airytec](http://www.airytec.com/en/switch-off/get.aspx) and configure it (web interface and windows firewall)
 
 ## Configure Airytec

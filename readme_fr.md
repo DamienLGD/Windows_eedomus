@@ -1,6 +1,6 @@
 # Windows_eedomus
 
-Plugin pour gérer son PC Windows depuis sa Eedomus (Wake on lan si connecté en Ethernet, extinction, veille, redémarrage)
+Plugin pour gérer son PC Windows depuis sa Eedomus (Wake on lan si connecté en Ethernet, extinction, veille, redémarrage)  
 Vous devez par contre installer [Airytec](http://www.airytec.com/en/switch-off/get.aspx) et le configurer (Activer l'interface web et autoriser le port 8000 par ex)
 
 ## Configuration de Airytec
